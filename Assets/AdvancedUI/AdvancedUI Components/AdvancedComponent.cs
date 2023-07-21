@@ -1,0 +1,63 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEngine.UI;
+
+namespace Dhs5.AdvancedUI
+{
+    [SelectionBase]
+    [DisallowMultipleComponent]
+    public abstract class AdvancedComponent : MonoBehaviour
+    {
+        protected virtual void Awake()
+        {
+            SetUpConfig();
+
+            SetUpGraphics();
+        }
+        private void OnValidate()
+        {
+            SetUpConfig();
+        }
+
+        protected virtual void OnEnable()
+        {
+            LinkEvents();
+            if (styleSheetContainer != null) { styleSheetContainer.RegisterAdvancedComponent(this); }
+            SetUpConfig();
+        }
+        protected virtual void OnDisable()
+        {
+            UnlinkEvents();
+            if (styleSheetContainer != null) { styleSheetContainer.UnregisterAdvancedComponent(this); }
+        }
+
+        protected abstract void LinkEvents();
+        protected abstract void UnlinkEvents();
+
+        protected abstract void SetUpConfig();
+        protected abstract void SetUpGraphics();
+
+
+        public abstract bool Interactable { get; set; }
+
+
+        public void ShowObjectOnStack(GameObject go) { if (go == null) return; UIStack.Show(go); }
+        public void BackOnStack() { UIStack.Back(); }
+        public void ClearStack() { UIStack.Clear(); }
+        public void StartNewStack(GameObject go) { if (go == null) return; UIStack.Clear(go); }
+
+
+        [Header("Style Sheet Container")]
+        [SerializeField] protected StyleSheetContainer styleSheetContainer;
+
+        public void SetContainer(StyleSheetContainer _styleSheetContainer)
+        {
+            styleSheetContainer = _styleSheetContainer;
+        }
+        public void UpdateStyleSheet()
+        {
+            SetUpConfig();
+        }
+    }
+}
