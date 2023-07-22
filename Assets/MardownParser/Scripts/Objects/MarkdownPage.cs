@@ -10,15 +10,32 @@ namespace Dhs5.Markdown
         [Header("References")]
         [SerializeField] private RectTransform mainLayout;
 
-        public void AddMarkdownObject(RectTransform objectRect)
+        private List<MarkdownObject> markdownObjects;
+
+        public void Begin()
         {
-            objectRect.SetParent(mainLayout);
+            markdownObjects = new();
+        }
+        public void AddMarkdownObject(MarkdownObject mdObject)
+        {
+            markdownObjects.Add(mdObject);
+            mdObject.Rect.SetParent(mainLayout);
         }
 
         public void Complete()
         {
             LayoutRebuilder.ForceRebuildLayoutImmediate(mainLayout);
             LayoutRebuilder.ForceRebuildLayoutImmediate(mainLayout);
+        }
+        public void Rebuild()
+        {
+            LayoutRebuilder.ForceRebuildLayoutImmediate(mainLayout);
+        }
+
+        public void Load()
+        {
+            foreach (MarkdownObject mdObject in markdownObjects)
+                mdObject.LoadObject();
         }
     }
 }

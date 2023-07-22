@@ -21,15 +21,15 @@ namespace Dhs5.Markdown
         VIDEO
     }
 
-    public struct MarkdownObject
+    public struct MarkdownObjectInfo
     {
-        public MarkdownObject(TextTag _tag, string _text, int _number)
+        public MarkdownObjectInfo(TextTag _tag, string _text, int _number)
         {
             tag = _tag;
             text = _text;
             number = _number;
         }
-        public MarkdownObject(TextTag _tag = TextTag.NULL)
+        public MarkdownObjectInfo(TextTag _tag = TextTag.NULL)
         {
             tag = TextTag.NULL;
             text = null;
@@ -48,7 +48,7 @@ namespace Dhs5.Markdown
 
     public static class MarkdownReader
     {
-        public static List<MarkdownObject> ParseMarkdownFile(TextAsset markdownFile)
+        public static List<MarkdownObjectInfo> ParseMarkdownFile(TextAsset markdownFile)
         {
             return ParseMarkdownLines(GetMarkdownTextLines(ReadMarkdownFile(markdownFile)));
         }
@@ -65,15 +65,15 @@ namespace Dhs5.Markdown
             return new List<string>(temp);
         }
 
-        private static List<MarkdownObject> ParseMarkdownLines(List<string> lines)
+        private static List<MarkdownObjectInfo> ParseMarkdownLines(List<string> lines)
         {
-            List<MarkdownObject> result = new();
+            List<MarkdownObjectInfo> result = new();
 
             foreach (string line in lines)
             {
                 if (string.IsNullOrWhiteSpace(line))
                 {
-                    result.Add(new MarkdownObject());
+                    result.Add(new MarkdownObjectInfo());
                 }
                 else
                 {
@@ -84,13 +84,13 @@ namespace Dhs5.Markdown
             return result;
         }
 
-        private static MarkdownObject ParseMarkdownLine(string line)
+        private static MarkdownObjectInfo ParseMarkdownLine(string line)
         {
             line = line.Trim();
             TextTag tag = GetTag(line, out int number);
             string text = ParseText(ExtractText(line, tag));
 
-            MarkdownObject result = new(tag, text, number);
+            MarkdownObjectInfo result = new(tag, text, number);
 
             return result;
         }

@@ -17,5 +17,7 @@ public class TestMD : MonoBehaviour
         //}
 
         displayer.SetUpMardownPage(page, text);
+
+        page.Load();
     }
 }

@@ -173,7 +173,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 490, y: 275.625}
+  m_SizeDelta: {x: 0, y: 275.625}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!222 &9132775655008144118
 CanvasRenderer:
@@ -695,9 +695,49 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: styleSheetContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: customStyleSheet.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: toggleStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
       propertyPath: toggleStylePicker.styleSheetUID
       value: 7672
       objectReference: {fileID: 0}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: customStyleSheet.textStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: customStyleSheet.backgroundStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: customStyleSheet.checkmarkTextStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: customStyleSheet.checkmarkImageStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: customStyleSheet.trueBackgroundStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: customStyleSheet.uncheckmarkTextStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 13483365766985107, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
+      propertyPath: customStyleSheet.uncheckmarkImageStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
     - target: {fileID: 13483366370460858, guid: 4d031d4097525a04f8d937bc631bb0a8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -787,6 +827,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 4364387875943174963}
     m_Modifications:
+    - target: {fileID: 5051551995824707747, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
+      propertyPath: styleSheetContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 5051551995824707747, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
+      propertyPath: customStyleSheet.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 5051551995824707747, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
+      propertyPath: imageStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
     - target: {fileID: 5051551995824707747, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
       propertyPath: imageStylePicker.styleSheetUID
       value: 2809
@@ -926,9 +978,37 @@ PrefabInstance:
     m_TransformParent: {fileID: 4364387875943174963}
     m_Modifications:
     - target: {fileID: 1385881815556008421, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
+      propertyPath: styleSheetContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 1385881815556008421, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
+      propertyPath: customStyleSheet.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 1385881815556008421, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
+      propertyPath: sliderStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 1385881815556008421, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
       propertyPath: sliderStylePicker.styleSheetUID
       value: 6552
       objectReference: {fileID: 0}
+    - target: {fileID: 1385881815556008421, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
+      propertyPath: customStyleSheet.fillStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 1385881815556008421, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
+      propertyPath: customStyleSheet.textStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 1385881815556008421, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
+      propertyPath: customStyleSheet.handleStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 1385881815556008421, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
+      propertyPath: customStyleSheet.backgroundStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
     - target: {fileID: 3248574470491499163, guid: f415e8a6c6675674092e7e25fa8d5019, type: 3}
       propertyPath: m_PixelsPerUnitMultiplier
       value: 0.75
@@ -1131,8 +1211,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 1983538036950895575}
     m_Modifications:
     - target: {fileID: 5051551995824707747, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
+      propertyPath: styleSheetContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 5051551995824707747, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
+      propertyPath: customStyleSheet.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 5051551995824707747, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
+      propertyPath: imageStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 5051551995824707747, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
       propertyPath: imageStylePicker.styleSheetUID
-      value: 5655
+      value: 178
       objectReference: {fileID: 0}
     - target: {fileID: 5051551995824707748, guid: e16cf499f2b7f144aaff0c5dc1fb3513, type: 3}
       propertyPath: m_Sprite
@@ -1286,9 +1378,9 @@ MonoBehaviour:
     m_Bottom: 5
   m_ChildAlignment: 0
   m_Spacing: 0
-  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 0
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0

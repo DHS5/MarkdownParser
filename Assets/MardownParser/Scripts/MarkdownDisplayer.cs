@@ -22,21 +22,23 @@ namespace Dhs5.Markdown
 
         public void SetUpMardownPage(MarkdownPage page, TextAsset markdownFile)
         {
-            RectTransform rect;
+            page.Begin();
 
-            List<MarkdownObject> markdownObjects = MarkdownReader.ParseMarkdownFile(markdownFile);
+            MarkdownObject obj;
 
-            foreach (MarkdownObject markdownObject in markdownObjects)
+            List<MarkdownObjectInfo> markdownObjects = MarkdownReader.ParseMarkdownFile(markdownFile);
+
+            foreach (MarkdownObjectInfo markdownObject in markdownObjects)
             {
-                rect = CreateMarkdownObject(markdownObject, page);
+                obj = CreateMarkdownObject(markdownObject, page);
 
-                if (rect != null) page.AddMarkdownObject(rect);
+                if (obj != null) page.AddMarkdownObject(obj);
             }
 
             page.Complete();
         }
 
-        private RectTransform CreateMarkdownObject(MarkdownObject mdObj, MarkdownPage page)
+        private MarkdownObject CreateMarkdownObject(MarkdownObjectInfo mdObj, MarkdownPage page)
         {
             GameObject obj;
 
@@ -44,7 +46,7 @@ namespace Dhs5.Markdown
             {
                 case TextTag.NULL: 
                     obj = Instantiate(emptyPrefab);
-                    return obj.transform as RectTransform;
+                    break;
                 case TextTag.TITLE1: 
                     obj = Instantiate(title1Prefab);
                     break;
@@ -77,7 +79,13 @@ namespace Dhs5.Markdown
                     break;
                 default:
                     obj = Instantiate(emptyPrefab);
-                    return obj.transform as RectTransform;
+                    break;
+            }
+
+            // Null
+            if (mdObj.tag == TextTag.NULL)
+            {
+                return obj.GetComponent<MarkdownObject>();
             }
 
             // Text
@@ -97,10 +105,8 @@ namespace Dhs5.Markdown
                     {
                         mdText.SetText(mdObj.text);
                     }
-
-                    return mdText.Rect;
                 }
-                return null;
+                return mdText;
             }
 
             // Photo
@@ -110,11 +116,10 @@ namespace Dhs5.Markdown
 
                 if (mdImage != null)
                 {
-                    mdImage.SetImage(mdObj.text);
-                    return mdImage.Rect;
+                    mdImage.SetImage(mdObj.text, page);
                 }
 
-                return null;
+                return mdImage;
             }
 
             // Video
@@ -125,10 +130,9 @@ namespace Dhs5.Markdown
                 if (mdVideo != null)
                 {
                     mdVideo.SetVideo(mdObj.text, page);
-                    return mdVideo.Rect;
                 }
 
-                return null;
+                return mdVideo;
             }
 
             return null;

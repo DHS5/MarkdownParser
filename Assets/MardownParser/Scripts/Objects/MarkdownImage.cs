@@ -2,18 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Dhs5.AdvancedUI;
+using System;
 
 namespace Dhs5.Markdown
 {
-    public class MarkdownImage : MonoBehaviour
+    public class MarkdownImage : MarkdownObject
     {
         [Header("References")]
-        [SerializeField] private RectTransform rect;
         [SerializeField] private URLImage urlImage;
 
-        public RectTransform Rect => rect;
+        public event Action OnNeedToRebuildLayout
+        { add { urlImage.onSetRatio += value; } remove { urlImage.onSetRatio -= value; } }
 
-        public void SetImage(string url)
+        private string url;
+
+        public void SetImage(string _url, MarkdownPage page)
+        {
+            url = _url;
+            OnNeedToRebuildLayout += page.Rebuild;
+        }
+
+        public override void LoadObject()
         {
             urlImage.SetTexture(url);
         }

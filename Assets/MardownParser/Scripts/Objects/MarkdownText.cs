@@ -5,14 +5,11 @@ using TMPro;
 
 namespace Dhs5.Markdown
 {
-    public class MarkdownText : MonoBehaviour
+    public class MarkdownText : MarkdownObject
     {
         [Header("References")]
-        [SerializeField] private RectTransform rect;
         [SerializeField] private TextMeshProUGUI text;
         [SerializeField] private TextMeshProUGUI numberText;
-
-        public RectTransform Rect => rect;
 
         public void SetText(string t)
         {

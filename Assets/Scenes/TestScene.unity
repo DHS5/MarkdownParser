@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b00ed15200bd6aa4b8c825d9cfabf1d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: {fileID: 4900000, guid: 6d21793b154b0b8449ae52f3b95ed4bb, type: 3}
+  text: {fileID: 4900000, guid: f8e98565adb113540b7d5154ed81902c, type: 3}
   page: {fileID: 440029108}
   displayer: {fileID: 80828735}
 --- !u!1 &80828733
@@ -3238,7 +3238,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6505521096291034157, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0.5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6505521096291034157, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
       propertyPath: m_AnchorMax.y
@@ -3246,7 +3246,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6505521096291034157, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
       propertyPath: m_AnchorMin.x
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6505521096291034157, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
       propertyPath: m_AnchorMin.y
@@ -3254,7 +3254,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6505521096291034157, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 500
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6505521096291034157, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3308,6 +3308,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7415768302260418305, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415768302260418305, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7415768302260418305, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774175050825192611, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774175051309081754, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: styleSheetContainer
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 8774175051309081754, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: customStyleSheet.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 8774175051309081754, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: scrollviewStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 8774175051309081754, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: scrollviewStylePicker.styleSheetUID
+      value: 6688
+      objectReference: {fileID: 0}
+    - target: {fileID: 8774175051309081754, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: customStyleSheet.backgroundStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 8774175051309081754, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: customStyleSheet.viewportMaskStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 8774175051309081754, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: customStyleSheet.verticalScrollbarStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
+    - target: {fileID: 8774175051309081754, guid: f99d451d8a6a7c446b8d14c5b11297fb, type: 3}
+      propertyPath: customStyleSheet.horizontalScrollbarStylePicker.container
+      value: 
+      objectReference: {fileID: 11400000, guid: 45081e7fce387e34088fe6e19911bf81, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
