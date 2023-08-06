@@ -12,6 +12,8 @@ namespace Dhs5.Markdown
 
         private List<MarkdownObject> markdownObjects;
 
+        public bool Loaded { get; private set; }
+
         public void Begin()
         {
             markdownObjects = new();
@@ -34,8 +36,11 @@ namespace Dhs5.Markdown
 
         public void Load()
         {
+            if (Loaded) return;
+
             foreach (MarkdownObject mdObject in markdownObjects)
                 mdObject.LoadObject();
+            Loaded = true;
         }
     }
 }
